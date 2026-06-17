@@ -6,3 +6,38 @@ const nav = document.querySelector('nav');
                 nav.style.padding = '1.4rem 3rem';
             }
         });
+
+ const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+       const glow = document.querySelector(".cursor-glow");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    currentX += (mouseX - currentX) * 0.08;
+    currentY += (mouseY - currentY) * 0.08;
+
+    glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
+
+    requestAnimationFrame(animate);
+}
+
+animate();
