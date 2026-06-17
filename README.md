@@ -32,5 +32,5 @@ Yogesh-Kumar/
 1. Clone the repository
 
 ```bash
-git clone 
+git clone https://github.com/arunk707808-eng/Yogesh-Kumar.git
 Open index.html in your browser.
