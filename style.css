@@ -420,3 +420,94 @@
             background: var(--accent);
             opacity: 0.5;
         }
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 2rem;
+            align-items: start;
+            padding: 2rem 2px;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(184, 255, 87, 0.04), transparent);
+            transition: width 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            width: 100%;
+        }
+
+        .project-card:hover .project-title {
+            color: var(--accent);
+        }
+
+        .project-card:hover .project-arrow {
+            transform: translate(3px, -3px);
+            opacity: 1;
+        }
+
+        .project-num {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--muted);
+            padding-top: 0.2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .project-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+            transition: color 0.25s;
+        }
+
+        .project-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+
+        .project-arrow {
+            font-size: 1.1rem;
+            color: var(--muted);
+            opacity: 0.4;
+            transition: all 0.25s ease;
+            padding-top: 0.1rem;
+        }
