@@ -595,3 +595,19 @@
         .contact-link:hover {
             color: var(--accent);
         }
+        /* footer */
+          footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        footer span {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+        }
