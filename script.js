@@ -1,3 +1,20 @@
+
+const indicator = document.getElementById("scroll-indicator");
+
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress = (scrollTop / docHeight) * 100;
+
+    if (window.innerWidth <= 768) {
+        indicator.style.width = `${progress}%`;
+    } else {
+        indicator.style.height = `${progress}%`;
+    }
+});
+
 const nav = document.querySelector('nav');
  window.addEventListener('scroll', () => {
             if (window.scrollY > 80) {

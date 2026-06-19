@@ -12,14 +12,20 @@
           <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- <div class="cursor-glow"></div> -->
+    <div id="scroll-bar"
+    class="fixed right-6 top-1/2 -translate-y-1/2 h-64 w-1.5 bg-gray-700 rounded-full z-50 hidden sm:block">
+
+    <div id="scroll-indicator"
+        class="bg-[#1DCD9F] h-0 w-full rounded-full transition-all duration-100">
+    </div>
+</div>
+  <div class="cursor-glow"></div>
   <!-- Nav Bar -->
    <nav>
         <a href="#hero" class="nav-logo">YK<span>.</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-badge">Open to work</div>
@@ -45,6 +51,10 @@
     <section id="about">
         <div class="section-label"><span>01</span> About</div>
         <div class="about-grid">
+             <div class="about-stack reveal" style="transition-delay: 0.15s">
+                <img src="./images/dp.jpeg" alt="" class="bw-img">
+                <img src="./images/greenbgdp.jpeg" alt="">
+            </div>
             <div class="about-text reveal">
                 <h2>Building beautiful and functional web experiences.</h2>
 
@@ -52,10 +62,7 @@
 
 <p>When I'm not coding, I'm probably optimizing performance, exploring new technologies, or convincing myself that one more feature won't break production.</p>
             </div>
-            <div class="about-stack reveal" style="transition-delay: 0.15s">
-                <img src="./images/dp.jpeg" alt="" class="bw-img">
-                <img src="./images/greenbgdp.jpeg" alt="">
-            </div>
+           
         </div>
     </section>
 
