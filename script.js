@@ -6,12 +6,12 @@ window.addEventListener("scroll", () => {
     const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-    const progress = (scrollTop / docHeight) * 100;
+    const progress = scrollTop / docHeight;
 
     if (window.innerWidth <= 768) {
-        indicator.style.width = `${progress}%`;
+        indicator.style.transform = `scaleX(${progress})`;
     } else {
-        indicator.style.height = `${progress}%`;
+        indicator.style.transform = `scaleY(${progress})`;
     }
 });
 
